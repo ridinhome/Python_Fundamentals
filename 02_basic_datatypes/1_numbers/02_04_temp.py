@@ -10,3 +10,8 @@ Output should read like - "81.32 degrees fahrenheit = 27.4 degrees celsius"
 
 
 '''
+
+fahr_degree = float(input ("Enter Temperature in Fahrenheit"))
+cel_degree = (fahr_degree - 32) * (5 / 9)
+print (fahr_degree, "degrees in fahrenheit = ", cel_degree," degrees celsisu")
+
