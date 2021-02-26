@@ -7,3 +7,18 @@ Example input:  1,2,3,4,5,6,7,8,9,10
 Example output: 2,4,6,8,10,9,7,5,3,1
 
 '''
+
+#initializing list
+num_list = []
+
+for i in range (0,10):
+    num_list.append(input("Please enter a number :"))
+
+for i in range (1,11,2):
+    print (num_list[i])
+
+for i in range (8,-1,-2):
+    print (num_list[i])
+
+
+

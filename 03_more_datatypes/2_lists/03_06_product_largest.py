@@ -9,3 +9,25 @@ that we haven't looked at yet. See if you can figure it out, otherwise
 come back to this task after you have learned about loops)
 
 '''
+
+#initializing list
+numbers = [0]
+
+#Entering the values
+for i in range (0,10):
+    numbers.append(input("Please enter a number :"))
+
+#deleting the front element
+numbers.pop(0)
+x = int(numbers[0])
+
+#looping through the list
+for i in range (0,len(numbers)):
+    if x < int(numbers[i]):
+        x = int(numbers[i])
+
+#printing the results
+print ("The largest number is ", x)
+
+
+
