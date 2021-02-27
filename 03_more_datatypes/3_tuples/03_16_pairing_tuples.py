@@ -11,3 +11,13 @@ Note: This lab might be challenging! Make sure to discuss it with your mentor
 or chat about it on our forum.
 
 '''
+
+inputstr = input("Please enter a list of numbers")
+tuplelist = []
+
+for i in range (0,len(inputstr),2):
+    if len(inputstr) % 2 == 0:
+        tuplelist.append(tuple(inputstr[i][i+1]))
+
+print (tuplelist)
+
