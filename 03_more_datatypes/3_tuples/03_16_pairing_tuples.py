@@ -12,12 +12,26 @@ or chat about it on our forum.
 
 '''
 
-inputstr = input("Please enter a list of numbers")
-tuplelist = []
+num_str = input ("Please enter a list of numbers:")
+split_list = num_str.split()
+num_list =[]
+tuple_list = []
 
-for i in range (0,len(inputstr),2):
-    if len(inputstr) % 2 == 0:
-        tuplelist.append(tuple(inputstr[i][i+1]))
+for i in range (0,len(split_list)):
+    num_list.append(int(split_list[i]))
 
-print (tuplelist)
+num_list.sort()
 
+if len(num_list) % 2 ==0:
+    for i in range (0,len(num_list)-1,2):
+        tuple_to_add = (num_list[i],num_list[i+1])
+        tuple_list.append(tuple_to_add)
+
+else:
+    for i in range (0,len(num_list)-1,2):
+        tuple_to_add = (num_list[i],num_list[i+1])
+        tuple_list.append(tuple_to_add)
+    tuple_to_add = (num_list[len(num_list)-1],0)
+    tuple_list.append(tuple_to_add)
+
+print (tuple_list)
