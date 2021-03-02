@@ -6,3 +6,11 @@ user_input = "hello"
 result = {"h": 1, "e": 1, "l": 2, "o": 1}
 
 '''
+
+inputstr = input("Please enter a string :").lower().replace(" ","")
+dictionary = {}
+
+for element in inputstr:
+    dictionary[element] = inputstr.count(element)
+
+print (dictionary)
