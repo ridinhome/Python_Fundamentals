@@ -7,3 +7,13 @@ The output of your calculation should therefore look like this:
 
 The sum is: 5050
 '''
+
+number1 = int(input("Please entere the first number:"))
+number2 = int(input("Please entere the first number:"))
+
+sum =0
+
+for i in range (number1,number2+1):
+    sum += i
+
+print (sum)
