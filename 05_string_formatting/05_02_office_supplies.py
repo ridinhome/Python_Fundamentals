@@ -25,3 +25,8 @@ office = [
     {"full_name": "Creed Bratton", "item": "mung beans"},
     {"full_name": "Darryl Philbin", "item": "forklift"},
 ]
+
+for entry in office:
+    name = entry["full_name"].split()
+    last_name_first_name = name[1].upper() + ', ' + name[0]
+    print (f'{last_name_first_name:<20} {entry["item"]}')
