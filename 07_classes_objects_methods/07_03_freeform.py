@@ -13,3 +13,56 @@ Using objects you can model anything you want.
 Cars, animals, card games, sports teams, trees, people etc...
 
 '''
+
+class Ball():
+
+    def __init__(self, size,color,material,sport):
+        self.size = size
+        self.color = color
+        self.material = material
+        self.sport = sport
+
+    def __str__(self):
+        print (f"The ball is {self.size} cm in diameter, it is {self.color} in color, made of {self.material} and use in {self.sport}")
+
+    def __add__(self,other):
+        return self.size + other.size
+
+class Bat():
+
+    def __init__(self,length,material,sport):
+        self.length = length
+        self.material = material
+        self.sport = sport
+
+    def __str__(self):
+        print (f"The bat is {self.length} inches long, made of {self.material} and is used in {self.sport}.")
+
+class Shoes():
+
+    def __init__(self, size, material, sport):
+        self.size = size
+        self.material = material
+        self.sport = sport
+
+    def __str__(self):
+        return (f"The shoes are size {self.size}, made of {self.material} and used in {self.sport}")
+
+ball1 = Ball(20,"Red","Rubber","Basketball")
+ball2 = Ball(10,"White","Leather","Baseball")
+
+bat1 = Bat(10,"Wood","Baseball")
+bat2 = Bat(15,"Graphite","Tennis")
+
+shoes1 = Shoes(10,"Leather","Basketball")
+shoes2 = Shoes(12,"Rubber","Baseball")
+
+ball1.__str__()
+ball2.__str__()
+bat1.__str__()
+bat2.__str__()
+shoes1.__str__()
+shoes2.__str__()
+
+print (ball1.__add__(ball2))
+

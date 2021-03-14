@@ -18,3 +18,27 @@ CLASSES AND INHERITANCE
     Any class attributes you could add?
 
 '''
+class Movie():
+
+    def __init__(self,year,title):
+        self.year = year
+        self.title = title
+
+class RomCom(Movie):
+
+    def __init__(self,year,title,star):
+        super().__init__(year,title)
+        self.star = star
+
+class ActionMovie(Movie):
+
+    def __init__(self,year,title,star,pg = 13):
+        super().__init__(year,title)
+        self.star = star
+        self.pg = pg
+
+romcom = RomCom(1996,"Harry Met Sally","Meg Harrison")
+actionmovie = ActionMovie(2012,"Terminator","Al Pacino",18)
+
+print (f"{romcom.title} was made in {romcom.year} and stars {romcom.star}")
+print (f"{actionmovie.title} was made in {actionmovie.year}, stars {actionmovie.star} and is rate PG {actionmovie.pg}")
