@@ -9,3 +9,7 @@ TIP:
     very common. head over to SO and find a solution!
 
 '''
+import urllib.request
+url = "https://codingnomads.co"
+r = requests.get(url)
+r.txt
