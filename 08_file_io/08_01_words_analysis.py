@@ -27,6 +27,7 @@ def shortestword(input_dict):
     return new_list, short_length, long_length
 
 with open("words.txt","r") as fin:
+    '''Opens the file, reads the words and then passes them to a dictionary after stripping out new line characters.'''
     for word in fin.readlines():
         word = word.rstrip()
         my_dict[word] = [int(len(word))]
@@ -34,6 +35,7 @@ with open("words.txt","r") as fin:
 sorted_list,shortest_length,longest_length = shortestword(my_dict)
 
 for key,value in sorted_list:
+    '''Creates the list of the shortest words and the longest words.'''
     if value == shortest_length:
         shortest_list.append(key)
     elif value == longest_length:

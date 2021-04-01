@@ -23,3 +23,35 @@ BONUS CHALLENGE: write a custom Exception that inherits from Exception and raise
 first 100 characters of any of the files contain the string "Prince".
 
 '''
+
+import os
+path = ("/Users/ridinhome/Documents/CodingNomads/labs/09_exceptions/books/")
+war_and_peace = []
+crime_and_punishment = ("")
+first_letter = {}
+os.chdir(path)
+file_list = ["war_and_peace.txt","crime_and_punishment.txt","pride_and_prejudice.txt"]
+
+###,
+
+# with open("war_and_peace.txt","r") as tolstoy:
+#     for item in tolstoy:
+#         war_and_peace.append(item)
+#
+# print (war_and_peace)
+
+# with open("crime_and_punishment.txt","w") as dostoyevsky:
+#     dostoyevsky.write(crime_and_punishment)
+
+for item in file_list:
+    with open(item,"r") as book:
+        lines = book.readline()
+        first_letter[item] = lines[0][0]
+
+for value in first_letter.values():
+    print (value)
+
+
+
+
+
