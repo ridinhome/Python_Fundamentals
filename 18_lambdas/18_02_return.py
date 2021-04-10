@@ -3,3 +3,5 @@ Write a lambda function that does not take in an arguments but returns a value.
 Print the return value.
 
 '''
+
+print (f"The valus is {(lambda: 2)()}")
